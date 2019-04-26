@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block content %}
+  
+    <div class="w3-content w3-section">
+        <img class="mySlides" src="http://soderblick1.bostadsratterna.se/system/files/styles/default/private/Brf_Soderblick_1.jpg?itok=Ke6XHZlM&c=08630822fc7c5e7ab7e26e659ec7af38" style="width:100%">
+        <img class="mySlides" src="http://soderblick1.bostadsratterna.se/system/files/styles/default/private/Hoglundav_1a.jpg?itok=gpNPXF6P" style="width:100%">
+        <img class="mySlides" src="http://soderblick1.bostadsratterna.se/system/files/styles/default/private/Hoglundav_1b.jpg?itok=EdfDd_BT" style="width:100%">
+      </div>
+        
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 3000); // Change image every 2 seconds
+      }
+      </script>
+  <div class="content-section">
+    <h1 class="rubrik">Hem</h1>
+    <h2>Välkommen till lugna o sköna Brf Söderblick 1!</h2>
+    <p>Föreningen är en äkta bostadsrättsförening och bildades 2012, den äger fastigheterna Ulriksberg 1 och 2 på Höglundavägen 1a och b i Nyköpings kommun. På fastigheten finns 2 byggnader med 24 lägenheter, uppförda år 2012.</p>
+    <p>Föreningen består för närvarande av 40 medlemmar. Styrelseordförande är vald till och med årsstämman 2019 och heter Gunnar Hellstrand. Totalt består styrelsen av 3 ordinarie ledamöter och 3 suppleanter.</p>
+    <p>Med närhet till såväl flera större matbutiker som centrum samt Nyköpings badhusområde är Höglundavägen en utmärkt adress för den som ej vill ha för långt till centrum men samtidigt kräver lugn och ro.</p>
+  </div>
+{% endblock content %}

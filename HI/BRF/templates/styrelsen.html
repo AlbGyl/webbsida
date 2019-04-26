@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+        <div class="content-section">
+            <h3>Styrelsen</h3>
+            {% for styrelsen in styrelsens %}
+            <article>
+              <div class="media-body">
+                <div class="article-metadata">  
+                </div>
+                <h4>{{ styrelsen.position }}</h4>
+                <div class="">
+                    <img scr=''>{{ styrelsen.image_file }}</img>
+                </div>
+                <p class="article-content">{{ styrelsen.name }}</br>{{ styrelsen.adress }}</br>{{ styrelsen.phone_number }}</br>{{ styrelsen.email }}</p>
+                <p class="article-content">{{ styrelsen.ansvarsområde }}</p>
+              </div>
+            </article>
+              {% endfor %}
+{% endblock content %}
